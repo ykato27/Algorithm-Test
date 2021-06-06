@@ -3,8 +3,7 @@
 
 """
 import pytest
-
-from is_prime import is_prime_v1 as is_prime
+from is_prime import is_prime_v3 as is_prime
 
 
 @pytest.mark.parametrize(('number', 'expected'), [

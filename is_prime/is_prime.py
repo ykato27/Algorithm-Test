@@ -31,7 +31,7 @@ def is_prime_v2(num):
     #         return False
 
     i = 2
-    while i * i == 0:
+    while i * i <= num:
         if num % i == 0:
             return False
         i += 1
@@ -49,11 +49,15 @@ def is_prime_v3(num):
     if num % 2 == 0:
         return False
 
-    i = 3
-    while i * i == 0:
+    for i in range(3, math.floor(math.sqrt(num) + 1), 2):
         if num % i == 0:
             return False
-        i += 2
+    
+    # i = 3
+    # while i * i <= num:
+    #     if num % i == 0:
+    #         return False
+    #     i += 2
 
     return True    
 
